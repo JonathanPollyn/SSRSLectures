@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AWDW</DataSourceReference>
+      <CommandText>SELECT TOP 100
+  DimCustomer.FirstName
+  ,DimCustomer.YearlyIncome
+  ,DimCustomer.LastName
+FROM
+  DimCustomer</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression ColumnOwner="DimCustomer" ColumnName="FirstName" />
+            <ColumnExpression ColumnOwner="DimCustomer" ColumnName="BirthDate" />
+            <ColumnExpression ColumnOwner="DimCustomer" ColumnName="TotalChildren" />
+            <ColumnExpression ColumnOwner="DimCustomer" ColumnName="YearlyIncome" />
+            <ColumnExpression ColumnOwner="DimCustomer" ColumnName="LastName" />
+          </SelectedColumns>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="FirstName">
+        <DataField>FirstName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="YearlyIncome">
+        <DataField>YearlyIncome</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="LastName">
+        <DataField>LastName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

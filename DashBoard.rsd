@@ -1,0 +1,320 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AWDW</DataSourceReference>
+      <CommandText>SELECT
+  DimProductCategory.ProductCategoryKey AS [DimProductCategory ProductCategoryKey]
+  ,DimProductCategory.ProductCategoryAlternateKey
+  ,DimProductCategory.EnglishProductCategoryName
+  ,DimProductCategory.SpanishProductCategoryName
+  ,DimProductCategory.FrenchProductCategoryName
+  ,DimProductSubcategory.ProductSubcategoryKey AS [DimProductSubcategory ProductSubcategoryKey]
+  ,DimProductSubcategory.ProductSubcategoryAlternateKey
+  ,DimProductSubcategory.EnglishProductSubcategoryName
+  ,DimProductSubcategory.SpanishProductSubcategoryName
+  ,DimProductSubcategory.FrenchProductSubcategoryName
+  ,DimProductSubcategory.ProductCategoryKey AS [DimProductSubcategory ProductCategoryKey]
+  ,DimProduct.ProductKey
+  ,DimProduct.ProductAlternateKey
+  ,DimProduct.ProductSubcategoryKey AS [DimProduct ProductSubcategoryKey]
+  ,DimProduct.WeightUnitMeasureCode
+  ,DimProduct.SizeUnitMeasureCode
+  ,DimProduct.EnglishProductName
+  ,DimProduct.SpanishProductName
+  ,DimProduct.FrenchProductName
+  ,DimProduct.StandardCost
+  ,DimProduct.FinishedGoodsFlag
+  ,DimProduct.Color
+  ,DimProduct.SafetyStockLevel
+  ,DimProduct.ReorderPoint
+  ,DimProduct.ListPrice
+  ,DimProduct.[Size]
+  ,DimProduct.SizeRange
+  ,DimProduct.Weight
+  ,DimProduct.DaysToManufacture
+  ,DimProduct.ProductLine
+  ,DimProduct.DealerPrice
+  ,DimProduct.[Class]
+  ,DimProduct.Style
+  ,DimProduct.ModelName
+  ,DimProduct.LargePhoto
+  ,DimProduct.EnglishDescription
+  ,DimProduct.FrenchDescription
+  ,DimProduct.ChineseDescription
+  ,DimProduct.ArabicDescription
+  ,DimProduct.HebrewDescription
+  ,DimProduct.ThaiDescription
+  ,DimProduct.GermanDescription
+  ,DimProduct.JapaneseDescription
+  ,DimProduct.TurkishDescription
+  ,DimProduct.StartDate
+  ,DimProduct.EndDate
+  ,DimProduct.Status
+FROM
+  DimProductSubcategory
+  INNER JOIN DimProductCategory
+    ON DimProductSubcategory.ProductCategoryKey = DimProductCategory.ProductCategoryKey
+  INNER JOIN DimProduct
+    ON DimProductSubcategory.ProductSubcategoryKey = DimProduct.ProductSubcategoryKey</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="ProductCategoryKey" />
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="ProductCategoryAlternateKey" />
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="EnglishProductCategoryName" />
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="SpanishProductCategoryName" />
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="FrenchProductCategoryName" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="ProductSubcategoryKey" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="ProductSubcategoryAlternateKey" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="EnglishProductSubcategoryName" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="SpanishProductSubcategoryName" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="FrenchProductSubcategoryName" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="ProductCategoryKey" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ProductKey" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ProductAlternateKey" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ProductSubcategoryKey" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="WeightUnitMeasureCode" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="SizeUnitMeasureCode" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="EnglishProductName" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="SpanishProductName" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="FrenchProductName" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="StandardCost" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="FinishedGoodsFlag" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Color" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="SafetyStockLevel" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ReorderPoint" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ListPrice" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Size" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="SizeRange" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Weight" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="DaysToManufacture" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ProductLine" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="DealerPrice" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Class" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Style" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ModelName" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="LargePhoto" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="EnglishDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="FrenchDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ChineseDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ArabicDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="HebrewDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="ThaiDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="GermanDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="JapaneseDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="TurkishDescription" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="StartDate" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="EndDate" />
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="Status" />
+          </SelectedColumns>
+          <Joins>
+            <Join Type="CROSS JOIN" ColumnOwner="DimProductSubcategory" />
+            <Join Type="INNER JOIN" ColumnOwner="DimProductCategory">
+              <On>
+                <From ColumnOwner="DimProductSubcategory" ColumnName="ProductCategoryKey" />
+                <To ColumnOwner="DimProductCategory" ColumnName="ProductCategoryKey" />
+              </On>
+            </Join>
+            <Join Type="INNER JOIN" ColumnOwner="DimProduct">
+              <On>
+                <From ColumnOwner="DimProductSubcategory" ColumnName="ProductSubcategoryKey" />
+                <To ColumnOwner="DimProduct" ColumnName="ProductSubcategoryKey" />
+              </On>
+            </Join>
+          </Joins>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="DimProductCategory_ProductCategoryKey">
+        <DataField>DimProductCategory ProductCategoryKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ProductCategoryAlternateKey">
+        <DataField>ProductCategoryAlternateKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="EnglishProductCategoryName">
+        <DataField>EnglishProductCategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductCategoryName">
+        <DataField>SpanishProductCategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FrenchProductCategoryName">
+        <DataField>FrenchProductCategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DimProductSubcategory_ProductSubcategoryKey">
+        <DataField>DimProductSubcategory ProductSubcategoryKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ProductSubcategoryAlternateKey">
+        <DataField>ProductSubcategoryAlternateKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="EnglishProductSubcategoryName">
+        <DataField>EnglishProductSubcategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductSubcategoryName">
+        <DataField>SpanishProductSubcategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FrenchProductSubcategoryName">
+        <DataField>FrenchProductSubcategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DimProductSubcategory_ProductCategoryKey">
+        <DataField>DimProductSubcategory ProductCategoryKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ProductKey">
+        <DataField>ProductKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ProductAlternateKey">
+        <DataField>ProductAlternateKey</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DimProduct_ProductSubcategoryKey">
+        <DataField>DimProduct ProductSubcategoryKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="WeightUnitMeasureCode">
+        <DataField>WeightUnitMeasureCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SizeUnitMeasureCode">
+        <DataField>SizeUnitMeasureCode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EnglishProductName">
+        <DataField>EnglishProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SpanishProductName">
+        <DataField>SpanishProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FrenchProductName">
+        <DataField>FrenchProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StandardCost">
+        <DataField>StandardCost</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="FinishedGoodsFlag">
+        <DataField>FinishedGoodsFlag</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="Color">
+        <DataField>Color</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SafetyStockLevel">
+        <DataField>SafetyStockLevel</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="ReorderPoint">
+        <DataField>ReorderPoint</DataField>
+        <rd:TypeName>System.Int16</rd:TypeName>
+      </Field>
+      <Field Name="ListPrice">
+        <DataField>ListPrice</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Size">
+        <DataField>Size</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SizeRange">
+        <DataField>SizeRange</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Weight">
+        <DataField>Weight</DataField>
+        <rd:TypeName>System.Double</rd:TypeName>
+      </Field>
+      <Field Name="DaysToManufacture">
+        <DataField>DaysToManufacture</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="ProductLine">
+        <DataField>ProductLine</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="DealerPrice">
+        <DataField>DealerPrice</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="Class">
+        <DataField>Class</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Style">
+        <DataField>Style</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ModelName">
+        <DataField>ModelName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LargePhoto">
+        <DataField>LargePhoto</DataField>
+        <rd:TypeName>System.Byte[]</rd:TypeName>
+      </Field>
+      <Field Name="EnglishDescription">
+        <DataField>EnglishDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FrenchDescription">
+        <DataField>FrenchDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ChineseDescription">
+        <DataField>ChineseDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ArabicDescription">
+        <DataField>ArabicDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="HebrewDescription">
+        <DataField>HebrewDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="ThaiDescription">
+        <DataField>ThaiDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="GermanDescription">
+        <DataField>GermanDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="JapaneseDescription">
+        <DataField>JapaneseDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TurkishDescription">
+        <DataField>TurkishDescription</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="StartDate">
+        <DataField>StartDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="EndDate">
+        <DataField>EndDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="Status">
+        <DataField>Status</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

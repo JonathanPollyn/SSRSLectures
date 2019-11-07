@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>CalculatedColumn</DataSourceReference>
+      <CommandText>SELECT
+  Production.Products.productname
+  ,Production.Products.categoryid
+  ,Production.Products.unitprice
+  ,Production.Suppliers.contactname
+  ,Production.Suppliers.city
+  ,Production.Suppliers.country
+  ,Production.Suppliers.address
+  ,Production.Suppliers.companyname
+FROM
+  Production.Suppliers
+  INNER JOIN Production.Products
+    ON Production.Suppliers.supplierid = Production.Products.supplierid</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression Schema="Production" ColumnOwner="Products" ColumnName="productname" />
+            <ColumnExpression Schema="Production" ColumnOwner="Products" ColumnName="categoryid" />
+            <ColumnExpression Schema="Production" ColumnOwner="Products" ColumnName="unitprice" />
+            <ColumnExpression Schema="Production" ColumnOwner="Suppliers" ColumnName="contactname" />
+            <ColumnExpression Schema="Production" ColumnOwner="Suppliers" ColumnName="city" />
+            <ColumnExpression Schema="Production" ColumnOwner="Suppliers" ColumnName="country" />
+            <ColumnExpression Schema="Production" ColumnOwner="Suppliers" ColumnName="address" />
+            <ColumnExpression Schema="Production" ColumnOwner="Suppliers" ColumnName="companyname" />
+          </SelectedColumns>
+          <Joins>
+            <Join Type="CROSS JOIN" ColumnOwner="Suppliers" Schema="Production" />
+            <Join Type="INNER JOIN" ColumnOwner="Products" Schema="Production">
+              <On>
+                <From ColumnOwner="Suppliers" Schema="Production" ColumnName="supplierid" />
+                <To ColumnOwner="Products" Schema="Production" ColumnName="supplierid" />
+              </On>
+            </Join>
+          </Joins>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="productname">
+        <DataField>productname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="categoryid">
+        <DataField>categoryid</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="unitprice">
+        <DataField>unitprice</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="contactname">
+        <DataField>contactname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="city">
+        <DataField>city</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="country">
+        <DataField>country</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="address">
+        <DataField>address</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="companyname">
+        <DataField>companyname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

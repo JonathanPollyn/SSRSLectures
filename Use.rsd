@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AWDW</DataSourceReference>
+      <CommandText>SELECT [SalesTerritoryKey]
+      ,[SalesTerritoryAlternateKey]
+      ,[SalesTerritoryRegion]
+      ,[SalesTerritoryCountry]
+      ,[SalesTerritoryGroup]
+  FROM [dbo].[DimSalesTerritory]</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="SalesTerritoryKey">
+        <DataField>SalesTerritoryKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryAlternateKey">
+        <DataField>SalesTerritoryAlternateKey</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryRegion">
+        <DataField>SalesTerritoryRegion</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryCountry">
+        <DataField>SalesTerritoryCountry</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryGroup">
+        <DataField>SalesTerritoryGroup</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

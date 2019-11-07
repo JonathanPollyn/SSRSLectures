@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AWDW</DataSourceReference>
+      <CommandText>SELECT
+  DimProduct.EnglishProductName
+  ,DimProductSubcategory.EnglishProductSubcategoryName
+  ,DimProductCategory.EnglishProductCategoryName
+  ,FactInternetSales.SalesAmount
+  ,FactInternetSales.TaxAmt
+  ,DimSalesTerritory.SalesTerritoryCountry
+FROM
+  DimProductSubcategory
+  INNER JOIN DimProductCategory
+    ON DimProductSubcategory.ProductCategoryKey = DimProductCategory.ProductCategoryKey
+  INNER JOIN DimProduct
+    ON DimProductSubcategory.ProductSubcategoryKey = DimProduct.ProductSubcategoryKey
+  INNER JOIN FactInternetSales
+    ON DimProduct.ProductKey = FactInternetSales.ProductKey
+  INNER JOIN DimSalesTerritory
+    ON FactInternetSales.SalesTerritoryKey = DimSalesTerritory.SalesTerritoryKey</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression ColumnOwner="DimProduct" ColumnName="EnglishProductName" />
+            <ColumnExpression ColumnOwner="DimProductSubcategory" ColumnName="EnglishProductSubcategoryName" />
+            <ColumnExpression ColumnOwner="DimProductCategory" ColumnName="EnglishProductCategoryName" />
+            <ColumnExpression ColumnOwner="FactInternetSales" ColumnName="SalesAmount" />
+            <ColumnExpression ColumnOwner="FactInternetSales" ColumnName="TaxAmt" />
+            <ColumnExpression ColumnOwner="DimSalesTerritory" ColumnName="SalesTerritoryCountry" />
+          </SelectedColumns>
+          <Joins>
+            <Join Type="CROSS JOIN" ColumnOwner="DimProductSubcategory" />
+            <Join Type="INNER JOIN" ColumnOwner="DimProductCategory">
+              <On>
+                <From ColumnOwner="DimProductSubcategory" ColumnName="ProductCategoryKey" />
+                <To ColumnOwner="DimProductCategory" ColumnName="ProductCategoryKey" />
+              </On>
+            </Join>
+            <Join Type="INNER JOIN" ColumnOwner="DimProduct">
+              <On>
+                <From ColumnOwner="DimProductSubcategory" ColumnName="ProductSubcategoryKey" />
+                <To ColumnOwner="DimProduct" ColumnName="ProductSubcategoryKey" />
+              </On>
+            </Join>
+            <Join Type="INNER JOIN" ColumnOwner="FactInternetSales">
+              <On>
+                <From ColumnOwner="DimProduct" ColumnName="ProductKey" />
+                <To ColumnOwner="FactInternetSales" ColumnName="ProductKey" />
+              </On>
+            </Join>
+            <Join Type="INNER JOIN" ColumnOwner="DimSalesTerritory">
+              <On>
+                <From ColumnOwner="FactInternetSales" ColumnName="SalesTerritoryKey" />
+                <To ColumnOwner="DimSalesTerritory" ColumnName="SalesTerritoryKey" />
+              </On>
+            </Join>
+          </Joins>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="EnglishProductName">
+        <DataField>EnglishProductName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EnglishProductCategoryName">
+        <DataField>EnglishProductCategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesAmount">
+        <DataField>SalesAmount</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="TaxAmt">
+        <DataField>TaxAmt</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="EnglishProductSubcategoryName">
+        <DataField>EnglishProductSubcategoryName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="SalesTerritoryCountry">
+        <DataField>SalesTerritoryCountry</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

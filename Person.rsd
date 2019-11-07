@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>ADW</DataSourceReference>
+      <CommandText>SELECT
+  Person.Person.BusinessEntityID
+  ,Person.Person.PersonType
+  ,Person.Person.NameStyle
+  ,Person.Person.Title
+  ,Person.Person.FirstName
+  ,Person.Person.MiddleName
+  ,Person.Person.LastName
+  ,Person.Person.Suffix
+  ,Person.Person.EmailPromotion
+  ,Person.Person.AdditionalContactInfo
+  ,Person.Person.Demographics
+  ,Person.Person.rowguid
+  ,Person.Person.ModifiedDate
+FROM
+  Person.Person</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="BusinessEntityID" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="PersonType" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="NameStyle" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="Title" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="FirstName" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="MiddleName" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="LastName" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="Suffix" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="EmailPromotion" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="AdditionalContactInfo" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="Demographics" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="rowguid" />
+            <ColumnExpression Schema="Person" ColumnOwner="Person" ColumnName="ModifiedDate" />
+          </SelectedColumns>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="BusinessEntityID">
+        <DataField>BusinessEntityID</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="PersonType">
+        <DataField>PersonType</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="NameStyle">
+        <DataField>NameStyle</DataField>
+        <rd:TypeName>System.Boolean</rd:TypeName>
+      </Field>
+      <Field Name="Title">
+        <DataField>Title</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FirstName">
+        <DataField>FirstName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="MiddleName">
+        <DataField>MiddleName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="LastName">
+        <DataField>LastName</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Suffix">
+        <DataField>Suffix</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="EmailPromotion">
+        <DataField>EmailPromotion</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="AdditionalContactInfo">
+        <DataField>AdditionalContactInfo</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Demographics">
+        <DataField>Demographics</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="rowguid">
+        <DataField>rowguid</DataField>
+        <rd:TypeName>System.Guid</rd:TypeName>
+      </Field>
+      <Field Name="ModifiedDate">
+        <DataField>ModifiedDate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

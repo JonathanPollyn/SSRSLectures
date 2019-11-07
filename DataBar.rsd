@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AWDW</DataSourceReference>
+      <CommandText>--SQL Select Statement for SSRS Data Bars
+SELECT Geo.EnglishCountryRegionName AS Country, 
+       Geo.StateProvinceName AS State, 
+       SUM(Cust.YearlyIncome) AS YearlyIncome, 
+       SUM(Fact.SalesAmount) AS SalesAmount
+FROM DimCustomer AS Cust 
+    INNER JOIN
+       FactInternetSales AS Fact ON 
+  Cust.CustomerKey = Fact.CustomerKey 
+    INNER JOIN
+        DimGeography AS Geo ON 
+  Cust.GeographyKey = Geo.GeographyKey
+GROUP BY Geo.EnglishCountryRegionName, 
+         Geo.StateProvinceName</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="Country">
+        <DataField>Country</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="State">
+        <DataField>State</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="YearlyIncome">
+        <DataField>YearlyIncome</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="SalesAmount">
+        <DataField>SalesAmount</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

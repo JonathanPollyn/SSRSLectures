@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>PagerRow</DataSourceReference>
+      <CommandText>SELECT
+  Sales.Customers.custid
+  ,Sales.Customers.companyname
+  ,Sales.Customers.contactname
+  ,Sales.Customers.contacttitle
+  ,Sales.Customers.address
+  ,Sales.Customers.city
+  ,Sales.Customers.region
+  ,Sales.Customers.postalcode
+  ,Sales.Customers.country
+  ,Sales.Customers.phone
+  ,Sales.Customers.fax
+FROM
+  Sales.Customers</CommandText>
+      <rd:DesignerState>
+        <QueryDefinition xmlns="http://schemas.microsoft.com/ReportingServices/QueryDefinition/Relational">
+          <SelectedColumns>
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="custid" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="companyname" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="contactname" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="contacttitle" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="address" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="city" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="region" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="postalcode" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="country" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="phone" />
+            <ColumnExpression Schema="Sales" ColumnOwner="Customers" ColumnName="fax" />
+          </SelectedColumns>
+        </QueryDefinition>
+      </rd:DesignerState>
+    </Query>
+    <Fields>
+      <Field Name="custid">
+        <DataField>custid</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="companyname">
+        <DataField>companyname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="contactname">
+        <DataField>contactname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="contacttitle">
+        <DataField>contacttitle</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="address">
+        <DataField>address</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="city">
+        <DataField>city</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="region">
+        <DataField>region</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="postalcode">
+        <DataField>postalcode</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="country">
+        <DataField>country</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="phone">
+        <DataField>phone</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="fax">
+        <DataField>fax</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>

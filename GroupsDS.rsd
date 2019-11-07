@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>AppleGroup</DataSourceReference>
+      <CommandText>SELECT       [orderid]
+	  ,firstname
+	  ,lastname
+	  ,birthdate
+	  ,hiredate
+                   ,[orderdate]
+                   ,[requireddate]
+                   ,[shippeddate]
+                   ,[shipperid]
+                   ,[freight]
+                   ,[shipcountry]	
+  FROM [TSQLV3].[Sales].[Orders] ord
+  join [HR].[Employees] epl
+  on ord.empid = epl.empid</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="orderid">
+        <DataField>orderid</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="firstname">
+        <DataField>firstname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="lastname">
+        <DataField>lastname</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="birthdate">
+        <DataField>birthdate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="hiredate">
+        <DataField>hiredate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="orderdate">
+        <DataField>orderdate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="requireddate">
+        <DataField>requireddate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="shippeddate">
+        <DataField>shippeddate</DataField>
+        <rd:TypeName>System.DateTime</rd:TypeName>
+      </Field>
+      <Field Name="shipperid">
+        <DataField>shipperid</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="freight">
+        <DataField>freight</DataField>
+        <rd:TypeName>System.Decimal</rd:TypeName>
+      </Field>
+      <Field Name="shipcountry">
+        <DataField>shipcountry</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+    </Fields>
+  </DataSet>
+</SharedDataSet>
